@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admit Card Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Daraz Selling Mastery Course by MSL Shahdadpur</h1>
+      
+        <form id="admitForm">
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" required />
+          </div>
+      
+          <div class="form-group">
+            <label for="fathersName">Father's Name</label>
+            <input type="text" id="fathersName" required />
+          </div>
+      
+          <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" required />
+          </div>
+      
+          <div class="form-group">
+            <label for="profilePicture">Profile Picture</label>
+            <input type="file" id="profilePicture" accept="image/*" />
+          </div>
+      
+          <button type="submit">Generate Admit Card</button>
+        </form>
+      
+        <div id="admitCard" class="admit-card" style="display: none;">
+           
+          
+          <h2>Daraz Selling Mastery Course by MSL Shahdadpur</h2>
+          
+          <div id="profileContainer">
+            <img id="profileImg" src="profile-placeholder.jpg" alt="Profile Picture" />
+            <div class="bg-logo"></div>
+          </div>
+          <p id="admitFullName"></p>
+          <p id="admitFathersName"></p>
+          <p id="admitDOB"></p>
+          <p id="admitRollNumber"></p>
+      
+      
+          <div class="signature">
+            Authorized Signature
+          </div>
+      
+          <button id="printButton">Print Admit Card</button>
+        </div>
+      </div>
+      
+
+  <script src="script.js" type="module"></script>
+</body>
+</html>
