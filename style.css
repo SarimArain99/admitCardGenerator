@@ -170,8 +170,18 @@ button:hover {
     display: none;
   }
 }
+
 @media print {
+  .bg-logo {
+    background-image: url("msl.png") !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Ensure the background image stays */
   .container {
     box-shadow: none;
   }
 }
+
+
