@@ -2,7 +2,10 @@ const form = document.getElementById('admitForm') as HTMLFormElement;
 const admitCard = document.getElementById('admitCard') as HTMLDivElement;
 const printButton = document.getElementById('printButton') as HTMLButtonElement;
 
-let rollNumber = parseInt(localStorage.getItem('rollNumber') || '1', 10);
+let rollNumber = parseInt(localStorage.getItem('rollNumber') ?? '1', 10);
+if (isNaN(rollNumber)) {
+  rollNumber = 1;
+}
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
